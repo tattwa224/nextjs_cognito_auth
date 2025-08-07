@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { signOut } from 'aws-amplify/auth'
-import AuthGuard from '@/components/auth/AuthGuard'
+import { AuthGuard } from '@/components/auth/AuthGuard'
 import { useState } from 'react'
 
 export default function DashboardPage() {
@@ -24,7 +24,7 @@ export default function DashboardPage() {
     <AuthGuard>
       <div style={{ maxWidth: 600, margin: 'auto', padding: 20 }}>
         <h1>📊 Dashboard</h1>
-        <p>You're logged in and viewing a protected route.</p>
+        <p>You're logged in and viewing a protected route. ie The Dashboard page.</p>
 
         <button
           onClick={handleSignOut}
